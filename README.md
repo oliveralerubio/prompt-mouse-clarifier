@@ -61,14 +61,17 @@ pmc config-path
 pmc daemon
 ```
 
-The GUI edits:
+The GUI lets you:
 
-- active provider;
-- button names such as `BTN_SIDE`, `BTN_EXTRA`, or `BTN_MIDDLE`;
-- click action;
-- hold action.
+- choose the active provider;
+- add, edit, and delete Ollama/OpenAI-compatible providers;
+- set the model, endpoint, timeout, and API-key environment-variable name;
+- map buttons such as `BTN_SIDE`, `BTN_EXTRA`, or `BTN_MIDDLE`;
+- assign `none`, `clarify`, or `previous_window` to short click and hold.
 
-Available actions in the portable MVP are `none`, `clarify`, and `previous_window`. Grammar correction and dictation are deliberately not bundled because their implementations are OS-, microphone-, and provider-specific; they can be added as separate adapters without publishing anyone's personal scripts.
+The default public configuration maps `BTN_SIDE` short click to `previous_window` and hold to `clarify`. Other buttons default to `none` until configured in the GUI.
+
+See [SECURITY.md](SECURITY.md) before enabling the Linux input backend.
 
 ## Example
 

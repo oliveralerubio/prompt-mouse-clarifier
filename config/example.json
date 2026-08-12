@@ -23,7 +23,7 @@
     "clipboard_backend": "wayland",
     "bindings": [
       {"button": "BTN_SIDE", "click": "previous_window", "hold": "clarify", "hold_seconds": 0.35},
-      {"button": "BTN_EXTRA", "click": "dictation", "hold": "grammar", "hold_seconds": 0.35}
+      {"button": "BTN_EXTRA", "click": "none", "hold": "none", "hold_seconds": 0.35}
     ]
   }
 }

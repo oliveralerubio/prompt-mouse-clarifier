@@ -6,11 +6,11 @@ import subprocess
 import time
 from threading import Lock
 
-from .clipboard import paste, selected_text
+from .clipboard import paste, restore_clipboard, selected_text
 from .clarifier import Clarifier
 from .prompt import validate_input
 
-ACTIONS = {"none", "clarify", "grammar", "dictation", "previous_window"}
+ACTIONS = {"none", "clarify", "previous_window"}
 
 
 def previous_window() -> None:
@@ -79,17 +79,26 @@ class EvdevMouseDaemon:
         if action == "previous_window":
             previous_window()
             return
-        if action in {"none", "grammar", "dictation"}:
-            # These remain explicit extension points instead of silently
-            # invoking a personal script in a public project.
+        if action == "none":
             return
         if not self.lock.acquire(blocking=False):
             return
+        previous_clipboard = ""
+        should_restore_clipboard = False
         try:
             text, previous = selected_text()
+            previous_clipboard = previous
+            should_restore_clipboard = bool(previous)
             validate_input(text)
             result, _provider = self.clarifier.clarify(text)
             if result != text:
                 paste(result)
+        except Exception:
+            if should_restore_clipboard and previous_clipboard:
+                restore_clipboard(previous_clipboard)
+            raise
+        else:
+            if should_restore_clipboard and previous_clipboard:
+                restore_clipboard(previous_clipboard)
         finally:
             self.lock.release()

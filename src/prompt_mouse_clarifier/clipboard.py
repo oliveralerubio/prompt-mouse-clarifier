@@ -31,3 +31,8 @@ def paste(text: str) -> None:
     subprocess.run(["wl-copy", text], check=True, timeout=2)
     time.sleep(0.08)
     subprocess.run(["ydotool", "key", "29:1", "47:1", "47:0", "29:0"], check=True, timeout=2)
+
+
+def restore_clipboard(text: str) -> None:
+    """Restore the clipboard after a failed copy-based selection attempt."""
+    subprocess.run(["wl-copy", text], check=True, timeout=2)
