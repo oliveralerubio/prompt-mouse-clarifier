@@ -5,12 +5,12 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "prompt-mouse-clarifier"
 version = "0.1.0"
-description = "Local, conservative prompt clarification from configurable mouse buttons"
+description = "Open-source local AI prompt enhancer and prompt rewriting assistant for configurable Linux/Wayland mouse buttons, Ollama, and OpenAI-compatible APIs"
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}
 authors = [{name = "Oliver Alejandro Rubio Jojoa"}]
-keywords = ["prompt-engineering", "ollama", "wayland", "mouse", "evdev", "open-source"]
+keywords = ["prompt-enhancer", "prompt-improver", "prompt-clarifier", "prompt-rewriter", "prompt-engineering", "ollama", "local-llm", "openai-compatible", "wayland", "mouse-automation", "evdev", "tkinter", "desktop-automation", "open-source"]
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Environment :: X11 Applications :: Qt",

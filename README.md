@@ -1,5 +1,13 @@
 # Prompt Mouse Clarifier
 
+**Local AI prompt enhancer and prompt rewriting assistant for Linux/Wayland. Use Ollama locally or any OpenAI-compatible API, then trigger conservative prompt clarification from configurable mouse buttons.**
+
+[![CI](https://github.com/oliveralerubio/prompt-mouse-clarifier/actions/workflows/ci.yml/badge.svg)](https://github.com/oliveralerubio/prompt-mouse-clarifier/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Python](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](pyproject.toml)
+
+**Keywords:** prompt enhancer, prompt improver, prompt clarifier, prompt rewriter, prompt engineering assistant, Ollama prompt tool, local LLM desktop automation, Linux Wayland AI tool, mouse-button AI shortcut, OpenAI-compatible prompt enhancer, `evdev`, `UInput`, Tkinter GUI, conservative prompt rewriting, terminology compression.
+
+**Canonical repository:** https://github.com/oliveralerubio/prompt-mouse-clarifier
+
 Local, conservative prompt clarification triggered from configurable mouse buttons.
 
 > Rewrite rough prompts into precise technical prompts without inventing scope.
