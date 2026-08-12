@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prompt-mouse-clarifier"
+version = "0.1.0"
+description = "Local, conservative prompt clarification from configurable mouse buttons"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Oliver Alejandro Rubio Jojoa"}]
+keywords = ["prompt-engineering", "ollama", "wayland", "mouse", "evdev", "open-source"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: X11 Applications :: Qt",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.optional-dependencies]
+linux = ["evdev>=1.7"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+pmc = "prompt_mouse_clarifier.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

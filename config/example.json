@@ -1,0 +1,29 @@
+{
+  "providers": [
+    {
+      "name": "ollama",
+      "kind": "ollama",
+      "base_url": "http://127.0.0.1:11434",
+      "model": "gemma4:latest",
+      "api_key_env": "",
+      "timeout": 45.0
+    },
+    {
+      "name": "openrouter",
+      "kind": "openai",
+      "base_url": "https://openrouter.ai/api/v1",
+      "model": "openai/gpt-4o-mini",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "timeout": 45.0
+    }
+  ],
+  "settings": {
+    "active_provider": "ollama",
+    "input_device": "auto",
+    "clipboard_backend": "wayland",
+    "bindings": [
+      {"button": "BTN_SIDE", "click": "previous_window", "hold": "clarify", "hold_seconds": 0.35},
+      {"button": "BTN_EXTRA", "click": "dictation", "hold": "grammar", "hold_seconds": 0.35}
+    ]
+  }
+}
